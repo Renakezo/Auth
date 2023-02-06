@@ -25,24 +25,42 @@ namespace Auth
             InitializeComponent();
         }
 
+        Label passLabel = new Label();
+        StackPanel aPanel = new StackPanel();
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window1 window1 = new Window1();
             MainWindow window = new MainWindow();
-            if (Login.Text == "" || Password.Text == "") Error.Text = "Поля пустые";
+            if (Login.Text == "" || Password.Password == "") Error.Text = "Поля пустые";
             else
             {
                     if (Login.Text.Length < 4) Error.Text = "Логин должен быть больше 3 символов";
                 else
                 {
-                    if (Password.Text.Length < 6) Error.Text = "Пароль должен быть больше 5 символов";
+                    if (Password.Password.Length < 6) Error.Text = "Пароль должен быть больше 5 символов";
                     else
                     {
                         Error.Text = "";
                         window1.Show();
+                        this.Close();
                     }
                 }
             }
+        }
+
+        private void Password_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Password.Background = null;
+        }
+
+        private void Password_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBlock someText = new TextBlock();
+            someText.Text = "Hello, World";
+
+            aPanel.Children.Add(someText);
+            /*Password.Background = new VisualBrush().Visual =;*/
         }
     }
 }

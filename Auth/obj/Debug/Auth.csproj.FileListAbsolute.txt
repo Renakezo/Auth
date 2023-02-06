@@ -16,3 +16,4 @@ C:\Users\arta3\Desktop\Авторизация\Auth\Auth\obj\Debug\Auth.exe
 C:\Users\arta3\Desktop\Авторизация\Auth\Auth\obj\Debug\Auth.pdb
 C:\Users\arta3\Desktop\Авторизация\Auth\Auth\obj\Debug\Window1.g.cs
 C:\Users\arta3\Desktop\Авторизация\Auth\Auth\obj\Debug\Window1.baml
+C:\Users\arta3\Desktop\Авторизация\Auth\Auth\obj\Debug\App.baml
