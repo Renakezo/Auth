@@ -9,6 +9,22 @@
         Icon="/login.png"
         WindowStartupLocation="CenterScreen"
         Title="Авторизация" Height="450" Width="450">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                        <ColorAnimation  Storyboard.TargetName="Auth"  
+                            Storyboard.TargetProperty = "(Button.Background).(LinearGradientBrush.GradientStops)[0].(GradientStop.Color)"  
+                            From="Cyan" To="#FF045B92" Duration="0:0:5"/>
+                        <ColorAnimation Storyboard.TargetName="Auth"  
+                              Storyboard.TargetProperty = "(Button.Background).(LinearGradientBrush.GradientStops)[1].(GradientStop.Color)"  
+                              From="#FF050300" To="#FF045B92" Duration="0:0:5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -25,9 +41,9 @@
             <RowDefinition Height="0.40*"></RowDefinition>
             <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" TextAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">Авторизация на сайте</TextBlock>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" TextAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center">Авторизация на сайте</TextBlock>
         <Image Source="/login.png" Grid.Row="2" Grid.Column="1" Margin="0 0 5 0"></Image>
-        <TextBox x:Name="Login" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0 10 0 0" Padding="5" FontSize="15" Foreground="White" BorderThickness="2">
+        <TextBox x:Name="Login" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Height="35" Padding="5" FontSize="15" Foreground="White" BorderThickness="2">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Cyan"/>
@@ -59,7 +75,7 @@
             </TextBox.Style>
         </TextBox>
         <Image Source="/login.png" Grid.Row="3" Grid.Column="1" Margin="0 0 5 0"></Image>
-        <PasswordBox x:Name="Password" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="0 10 0 0" Padding="5" FontSize="15" Foreground="White" BorderThickness="2" GotFocus="Password_GotFocus" LostFocus="Password_LostFocus" >
+        <PasswordBox x:Name="Password" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="0 0 0 0" Height="35" Padding="5" FontSize="15" Foreground="White" BorderThickness="2" GotFocus="Password_GotFocus" LostFocus="Password_LostFocus" >
             <PasswordBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Cyan"/>

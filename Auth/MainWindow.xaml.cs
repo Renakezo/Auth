@@ -56,11 +56,7 @@ namespace Auth
 
         private void Password_LostFocus(object sender, RoutedEventArgs e)
         {
-            TextBlock someText = new TextBlock();
-            someText.Text = "Hello, World";
-
-            aPanel.Children.Add(someText);
-            /*Password.Background = new VisualBrush().Visual =;*/
+            
         }
     }
 }
